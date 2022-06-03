@@ -1,122 +1,189 @@
 :root {
-    --black: #111c14;
-    --green: #5fd97c;
-    --sky: #203333;
-    --white: #f7f8fa;
-    --links: #b88cde;
-    --link_hover: #eb88da;
-    --font-size: 1.2rem;
-    --sans: Oxygen, sans-serif;
+  --black: #111c14;
+  --green: #5fd97c;
+  --sky: #203333;
+  --aqua: #37E2D5;
+  --name: #D4D925;
+  --pink: #FF06B7;
+  --white: #f7f8fa;
+  --links: #b88cde;
+  --link_hover: #eb88da;
+  --font-size: 1.2rem;
+  --sans: Oxygen, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans);
+  background-color: var(--sky);
+  color: var(--white);
+  font-size: var(--font-size);
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+a {
+  color: var(--links);
+}
+a:hover {
+  color: var(--link_hover);
+  text-decoration: none;
+}
+
+/* navbar */
+
+nav {
+  font-family: var(--sans);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;                  /* helps in creation of gap between the items */
+}
+
+nav li:first-child {
+  flex-basis: 100%;          /* allows the item to take full width of the screen */
+  text-align: center;
+}
+
+/* following is a class selector that target only those classes which consist the word fa- */
+nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--aqua);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+.resume {
+  background-color: #d94848;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+.resume:hover {
+  color: white;
+  background-color: #8a0f0f;
+}
+
+/* container styles */
+
+#container {
+  padding: 4rem 1rem 10rem 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+#container p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.name span{
+  font-size: 3rem;
+  color: var(--name);
+  display: block;
+}
+
+#container h2 {
+  font-size: 4rem;
+}
+
+
+/* contact section */
+
+.contact-back{
+  background-color: #400d3d;
+}
+
+.gradient{
+  background: linear-gradient(90deg, rgba(255,23,228,1) 0%,
+   rgba(134,235,251,1) 100%);
+   height: 2px;
+}
+#contact {
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+#contact h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+#contact p {
+  text-align: center;
+  line-height: 1.1;
+}
+.btn {
+  margin: 2rem auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: #f739eb;
+  border-radius: 5px;
+  height: 1.7rem;
+  cursor: pointer;
+}
+
+
+/* @media helps in setting the content, navbar or anything in the right manner when the screen size is bigger or smaller after a particular value.  In other words we can say that it helps in making the page responisve. */
+
+@media(min-width: 850px){    /* this means if the screen is atleast 850px then the code inside it is executed */
+  nav{
+    max-width: 1200px;
+    margin: 0 auto;     /* a good techinque to shift the items in center*/
   }
-  
-  html {
-    box-sizing: border-box;
+  nav li:first-child{
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
   }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--sans);
-    background-color: var(--sky);
-    color: var(--white);
-    font-size: var(--font-size);
-  }
-  
-  h1, h2, h3 {
-    margin: 0;
-  }
-  
-  a {
-    color: var(--links);
-  }
-  a:hover {
-    color: var(--link_hover);
-    text-decoration: none;
-  }
-  
-  /* navbar */
-  
-  nav {
-    font-family: var(--sans);
-    font-size: 80%;
-    padding: 1rem;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  nav li:first-child {
-    flex-basis: 100%;
-    text-align: center;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    display: block;
-  }
-  .resume {
-    background-color: #d94848;
-    padding: 0.5rem;
-    border-radius: 6px;
-  }
-  .resume:hover {
-    color: white;
-    background-color: #8a0f0f;
-  }
-  
-  /* container styles */
-  
-  #container {
-    padding-bottom: 10rem;
-  }
-  #container p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  
-  .name span{
-    font-size: 3rem;
-    color: #7ed7ed;
-    display: block;
-  }
-  
-  #container h2 {
-    font-size: 4rem;
-  }
-  
-  
-  /* contact section */
-  
-  #contact {
-    border: 2px solid #524e51;
-    background-color: #400d3d;
-    margin: 0 auto;
-    padding: 3rem 0;
-  }
-  #contact h2 {
-    text-align: center;
-    font-size: 2rem;
-  }
-  #contact p {
-    text-align: center;
-    line-height: 1.1;
-  }
-  .btn {
-    margin: 2rem auto;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    background-color: #f739eb;
-    border-radius: 5px;
-    height: 1.7rem;
-    cursor: pointer;
-  }
+}
+
+/* footer section */
+
+#foot{
+  background-color: #3C2C3E;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+#foot h2{
+  text-align: center;
+  font-size: 2rem;
+}
+
+#foot ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#foot p{
+  margin: 1.5rem;
+  text-align: center;
+}
+
+#foot [class*="fa-"] {
+  font-size: 150%;
+  color: var(--pink);
+}

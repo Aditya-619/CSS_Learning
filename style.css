@@ -3,6 +3,7 @@
   --green: #5fd97c;
   --sky: #203333;
   --aqua: #37E2D5;
+  --dkblue: #243A73;
   --name: #D4D925;
   --pink: #FF06B7;
   --white: #f7f8fa;
@@ -96,7 +97,7 @@ nav a {
 
 .name span{
   font-size: 3rem;
-  color: var(--name);
+  color: var(--aqua);
   display: block;
 }
 
@@ -104,6 +105,49 @@ nav a {
   font-size: 4rem;
 }
 
+/* project section */
+
+.project-sec{
+  background-color: var(--dkblue);
+}
+#project {
+  padding: 4rem 1rem;
+}
+#project h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+#project h3 {
+  color: var(--aqua);
+}
+#project h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+.blackbox {
+  background-color: var(--black);
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#project ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+}
+#project img {
+  margin: 2rem 0 4rem 0;
+  border-left: 1px solid var(--aqua);
+  border-top: 1px solid var(--aqua);
+  border-radius: 25px;
+  padding: 1rem;
+}
 
 /* contact section */
 

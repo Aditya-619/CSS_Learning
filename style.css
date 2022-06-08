@@ -83,12 +83,27 @@ nav a {
   background-color: #8a0f0f;
 }
 
+/* @media helps in setting the content, navbar or anything in the right manner when the screen size is bigger or smaller after a particular value.  In other words we can say that it helps in making the page responisve. */
+
+@media(min-width: 850px){    /* this means if the screen is atleast 850px then the code inside it is executed */
+  nav{
+    max-width: 1200px;
+    margin: 0 auto;     /* a good techinque to shift the items in center*/
+  }
+  nav li:first-child{
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
+
 /* container styles */
 
 #container {
-  padding: 4rem 1rem 10rem 1rem;
+  padding: 8rem 1rem 10rem 1rem;
   margin: 0 auto;
   max-width: 1200px;
+  margin-bottom: 8rem;
 }
 #container p {
   font-size: 1rem;
@@ -148,13 +163,17 @@ nav a {
   border-radius: 25px;
   padding: 1rem;
 }
-@media(min-width: 550px) {
+@media(min-width: 800px) {
   article {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: 2rem;
   }
-  #project img {
+  #project {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  #one {
     grid-column: 1/6;
     grid-row: 1/2;
   }
@@ -167,7 +186,21 @@ nav a {
   #project ul {
     justify-content: flex-end;
   }
+  #project .reverse .text {
+    grid-column: 1/7;
+    order: 2;
+    text-align: left;
+  }
+  #two {
+    width: 95%;
+    grid-column: 6/11;
+    grid-row: 1/2;
+  }
+  #project .reverse ul {
+    justify-content: flex-start;
+  }
 }
+
 
 
 /* contact section */
@@ -204,20 +237,6 @@ nav a {
   cursor: pointer;
 }
 
-
-/* @media helps in setting the content, navbar or anything in the right manner when the screen size is bigger or smaller after a particular value.  In other words we can say that it helps in making the page responisve. */
-
-@media(min-width: 850px){    /* this means if the screen is atleast 850px then the code inside it is executed */
-  nav{
-    max-width: 1200px;
-    margin: 0 auto;     /* a good techinque to shift the items in center*/
-  }
-  nav li:first-child{
-    flex-basis: auto;
-    text-align: left;
-    margin-right: auto;
-  }
-}
 
 /* footer section */
 

@@ -1,0 +1,36 @@
+# Flex Container & Flex items
+
+-> The flex container is the element that holds flex items.
+-> Flex items are direct children of flex containers.
+-> A container is crested with display: flex;
+
+* A skeleton for flexbox below:
+
+<div class = "flex-container">
+    <div>Flex item 1 </div>
+    <div>Flex item 2 </div>
+    <img src = "pic.png" alt = "also a flex item" />
+</div>
+
+# Flex container properties:-
+
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content
+
+# Flex items properties:-
+
+order
+flex-grow
+flex-shrink
+flex-shrink
+flex-basis
+align-self
+
+# Axes:
+
+If flex-direction: row, then main axis is x axis and cross axis is y axis.
+If flex-direction: column, then main axis is y axis and cross axis is x axis.

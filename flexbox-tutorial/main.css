@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    /* By default flex-direction is row, so not need to write but here
+    I write just for the shake of notice it. */
+    flex-direction: row;
+
+    background-color: aquamarine;
+
+    /* Justify-content is always on the main axis */
+    justify-content: start;
+
+    /* Align-items is always on the cross axis */
+    align-items: center;
+
+    /* If there are many item with given width and height is not fit in the row or column then it is shifhted to next row/col
+    by using the flex-wrap: wrap; property  */
+
+    /* flex-wrap: wrap; */
+}
+
+.item {
+    /* width: 100px; */
+
+    /* flex-basis sets the initial main size of a flex item. */
+    flex-basis: 100px;
+    /* flex-grow specifies how much the items will grow relative to rest of the flexible items inside the same container, 
+    it works in simple integers. */
+    flex-grow: 1;
+    height: 100px;
+    margin: 10px;
+    background-color: blue;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Order is the property through which you can change the order of the flex items */
+
+.item:nth-of-type(1) {    
+    /* order: 2; */
+}
+.item:nth-of-type(2) {    
+    /* order: 3; */
+    /* flex-basis: 200px;
+    flex-grow: 2; */
+}
+.item:nth-of-type(3) {    
+    /* order: 1; */
+}
+

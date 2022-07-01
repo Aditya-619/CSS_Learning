@@ -116,3 +116,36 @@ ul {
         text-align: center;
     }
 }
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-item {
+    flex-grow: 1;
+    background-color: #F4E06D;
+    border-radius: 15px;
+    margin: 20px 30px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+    padding: 12px 20px;
+}
+
+.flex-item h2 {
+    text-align: center;
+}
+.flex-item p {
+    text-align: center;
+}
+
+@media(max-width: 850px) {
+    .flex-container {
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .flex-item {
+        flex-direction: column;
+    }
+}

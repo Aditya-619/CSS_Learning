@@ -1,0 +1,38 @@
+
+* CSS Grid:-
+
+-> It is a powerful tool that CSS gives us to easily align items and create
+   two dimensional layouts.
+
+* Grid containers and Grid items:-
+
+-> The gris container is the element that holds grid items. Grid items are direct 
+   children of grid containers. A container is created with display: grid;
+
+* Skeleton of grid:-
+
+<div class="grid-container">
+    <div> Grid item1 </div>
+    <div> Grid item2 </div>
+    <img src="pic.png">
+</div>
+
+
+* Some common properties of grid containers:
+
+-> grid-template columns
+-> grid-template-rows
+-> grid gap
+-> grid-auto-rows
+-> grid-auto-columns
+-> grid-template-areas
+-> justify-content
+-> align-items
+
+* Some common properties of grid items:
+
+-> grid-column
+-> grid-rows
+-> grid-area
+-> align-self
+->justify-self
